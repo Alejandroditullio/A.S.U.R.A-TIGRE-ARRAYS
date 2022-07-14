@@ -95,7 +95,7 @@ for (let i= 1; i <=10; i + i ++ ){
 
 /////las array estan en el principio///
 
-
+/*
   const hoja=[ 25 ];
   const metal= [10];
   const cajas= [80];
@@ -128,10 +128,31 @@ alert("gracias por usar nuestra web");
 
 console.log(seleccion , valor);
 
+*/
 
+const resultado = document.getElementById("resultado");
+const container = document.querySelector(".container");
+let contador = 0;
 
+container.addEventListener("click", (e) => {
+ 
+if (e.target.classList.contains("btn-danger")) {
+    contador--;
+    pintarContador();
+  }
 
+if (e.target.classList.contains("btn-info")) {
+    contador++;
+    pintarContador();
+    
+  }
+  e.stopPropagation()
+});
 
+document.body.addEventListener('click', e => {console.log('body')})
 
+pintarContador = () => {
+  resultado.textContent = contador;
+};
 
 

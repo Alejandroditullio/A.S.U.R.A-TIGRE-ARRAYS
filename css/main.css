@@ -1,58 +1,144 @@
 @charset "UTF-8";
 
+*{
+    margin: 0%;
+    padding: 0%;
+}
 
 body {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 1300;
-    background-image: repeating-linear-gradient(90deg, rgb(248, 248, 248), rgb(237, 241, 237) 20px, #ffffff 10px, #e8f7e9 80px); 
+    background-image: repeating-linear-gradient(90deg, rgb(240, 240, 240), rgb(240, 240, 240) 20px, #ffffff 10px, #ffffff 80px); 
 }
 
-.menu{
-    margin-right: 20px;
+.titulos{
+    text-align: center;
+    font-size: 40px;
 }
 
-.carousel-inner{
-    width: 60px;
-    height: 80px;
-    padding-bottom: 40px;
-}
-
-.navbar-brand1{
-    display: flex;
-    background-position: right;
-    align-items: flex-end;
-    align-content: flex-end;
+.logos{
+    height: 250px;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-gap: 35px;
+    margin: 20px auto;
+    grid-template-areas: 
+        "logos logos logos logos" ;
+    background-color:rgb(225, 235, 225);
     
 }
-.navbar-brand1 img{
+ 
+
+.escudoasura{
     display: flex;
-    width: 350px;
-    align-content:flex-end;
+     width: 280px;
+     
+
+     justify-content: center;
+     align-items: center;
+     align-content: center;
+}
+     
+.argentinalogo{
+    width: 450px;
+    display: flex;
+}
+ 
+.bandera{
+     width: 230px;
+     height: 150px;
+     display: flex;
+     justify-content: center;
+     margin-top: 60px;
+}
+ 
+
+
+.menu{
+   
+    
+    color: rgb(252, 252, 252);
+    display:flex;
+    justify-content: space-between;
 }
 
-.logo-inicio{
-    width: 140px;
-    height: 140px;
+
+.navbarmenu{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 150px;
+    letter-spacing: 10px;
+
 }
 
+.nav-item:hover{
+    background: rgb(44, 240, 70);
+	color: rgb(26, 109, 15)
+
+}
+.carousel slide {
+    display:flex;   
+    
+}
+.carousel-inner{
+    width: 60px;
+    height: 100px;
+    padding-bottom: 40px;
+    margin: 5px;
+}
+
+
+
+.contenido{
+    display: flex;
+    position: relative;
+    height: 550px;
+    
+    border-radius: 10px; 
+    overflow: hidden;
+    
+}
+.contenido::before{
+    content: " ";
+    width: 60px;
+    position: absolute;
+    background: linear-gradient(#00e5ff, #b400fb);
+    animation:animate 5s linear infinite;
+}
+
+@keyframes animate {
+    0% {transform: rotate(0deg); }
+    
+    100% {transform: rotate(360deg); }
+    
+}
 
 
 
 .card{
-    
+    width: 350px;
     margin: 15px;
     padding: 30px;
     
 }
 
 
-
+.card-img-top{
+    width: 150px;
+    height: 250px;
+}
     
     
 
 .carousel-inner-{
     display: flex;
     width: 160px;
-    
+    margin: 25px;
    
 }
+
+.carro{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+
+ }
