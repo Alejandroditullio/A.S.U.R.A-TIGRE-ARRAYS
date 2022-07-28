@@ -81,29 +81,28 @@ body {
     
 }
 .carousel-inner{
-    width: 60px;
-    height: 100px;
+    width: 50px;
+    height: 150px;
     padding-bottom: 40px;
-    margin: 5px;
+    margin: 5px auto;
 }
 
 
 
 .contenido{
     display: flex;
-    position: relative;
+    position:static;
     height: 550px;
-    
     border-radius: 10px; 
-    overflow: hidden;
+   
     
 }
 .contenido::before{
     content: " ";
     width: 60px;
     position: absolute;
-    background: linear-gradient(#00e5ff, #b400fb);
-    animation:animate 5s linear infinite;
+    background: linear-gradient(#0fb9cc, #b400fb);
+    animation: animate 5s linear infinite;
 }
 
 @keyframes animate {
@@ -116,7 +115,7 @@ body {
 
 
 .card{
-    width: 350px;
+    width: 300px;
     margin: 15px;
     padding: 30px;
     
@@ -125,10 +124,17 @@ body {
 
 .card-img-top{
     width: 150px;
-    height: 250px;
+    height: 200px;
 }
     
+.card-text{
+    text-align: center;
+    font-size: 10px;
+}
     
+.btn btn-outline-success{
+    align-items: center;
+}
 
 .carousel-inner-{
     display: flex;
@@ -141,4 +147,9 @@ body {
     display: grid;
     grid-template-columns: 30% 30% 30%;
 
+ }
+
+ .productocarro{
+    display: inline-flex;
+    width: 1000px;
  }
