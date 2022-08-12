@@ -315,7 +315,7 @@ function removeItemCarrito(e){
 
   setTimeout( function(){
     alert.classList.add('remove')
-  }, 2000)
+  },2000)
     alert.classList.remove('remove')
 
   tr.remove()
@@ -347,3 +347,75 @@ window.onload = function(){
   }
 } 
 
+
+
+//registro de nuevos usuarios//
+
+var formulario = document.getElementById('formulario');
+var respuesta = document.getElementById('respuesta');
+
+formulario.addEventListener('submit', function(e){
+    e.preventDefault();
+    console.log('')
+
+    var datos = new FormData(formulario);
+
+    console.log(datos)
+    console.log(datos.get('usuario'))
+    console.log(datos.get('pass'))
+
+    fetch('post.php',{
+        method: 'POST',
+        body: datos
+    })
+        .then( res => res.json())
+        .then( data => {
+            console.log(data)
+            if(data === 'error'){
+                respuesta.innerHTML = `
+                <div class="alert alert-danger" role="alert">
+                    Llena todos los campos
+                </div>
+                `
+            }else{
+                respuesta.innerHTML = `
+                <div class="alert alert-primary" role="alert">
+                    ${data}
+                </div>
+                `
+            }
+        } )
+})
+
+
+
+///datos//
+
+var contenido = document.querySelector('#contenido' )
+
+  function traer() {
+    fetch('data.json')
+      .then(res => res.json())
+      .then(datos => {
+      // console.log(datos)
+       tabla(datos)
+            })
+        }
+
+  function tabla(datos) {
+            // console.log(datos)
+   contenido.innerHTML = ''
+      for(let valor of datos){
+      // console.log(valor.nombre)
+       contenido.innerHTML += `
+                
+        <tr>
+         <th scope="row">${ valor.id }</th>
+         <td>${ valor.nombre }</td>
+         <td>${ valor.email }</td>
+          <td>${ valor.estado ? "Activo" : "Eliminado" }</td>
+           </tr>
+                
+            `
+      }
+   }
