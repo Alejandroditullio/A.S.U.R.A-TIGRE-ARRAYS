@@ -19,7 +19,7 @@ body {
 .logos{
     height: 250px;
     display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-columns: 20% 20% 20% ;
     grid-gap: 35px;
     margin: 20px auto;
     grid-template-areas: 
@@ -31,12 +31,11 @@ body {
 
 .escudoasura{
     display: flex;
-     width: 280px;
-     
-
-     justify-content: center;
-     align-items: center;
-     align-content: center;
+    width: 280px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-left: 80px;
 }
      
 .argentinalogo{
@@ -50,6 +49,7 @@ body {
      display: flex;
      justify-content: center;
      margin-top: 60px;
+     margin-left: 180px;
 }
  
 
@@ -66,8 +66,9 @@ body {
 .navbarmenu{
     display: flex;
     justify-content: space-between;
-    margin-left: 150px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 10px;
+    margin-left: 18px;
 
 }
 
@@ -114,11 +115,13 @@ body {
 
 
 
-.card{
+.card1{
+    display: block;
     width: 300px;
     margin: 15px;
-    padding: 30px;
     
+    margin-left: 15px;
+    padding-left: 50px;
 }
 
 
@@ -142,6 +145,8 @@ body {
     margin: 25px;
    
 }
+
+/* carro de compras /////*/
 
 .carro{
     display: grid;
